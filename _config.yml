@@ -1,52 +1,46 @@
-locale: "en-US"
-title: Strata # Title of your site
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-baseurl: "" # the subpath of your site, e.g. /blog/
-google_analytics_key: ""
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-# Default description in social shares for the jekyll-seo-tag gem
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: MatJek
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Material theme based on <a href="http://materializecss.com">Materialize.css</a> for jekyll sites
+baseurl: "/matjek"
+url: "https://shawnteoh.github.io"
+permalink: /:year/:month/:day/:title
+repository: ShawnTeoh/matjek
+paginate: 5
 
-# Author details for the jekyll-seo-tag gem
-author:
-  name: Your Name
-  email: your-email@domain.com
-  twitter: # twitter username without the @ symbol
+# MatJek specific configurations
+github_profile: "https://github.com/ShawnTeoh"
+user: "John Doe"
+user_email: "john@doe.com"
+contact_url: "https://goo.gl/tVljbV"
+google_tracking_id: "UA-96359860-1"
+google_site_verification: "UA-96359860-1"
+disqus_shortname: "matjek"
 
-# Social details for the jekyll-seo-tag gem
-social:
-  name: Strata Reloaded Template
-  links:
-    - https://github.com/comfusion/strata-reloaded-jekyll-template
-
-permalink: pretty
-
+# Build settings
+markdown: kramdown
 gems:
-  - "jekyll-feed"
-  - "jekyll-seo-tag"
-  - "jekyll-paginate"
-  - "jekyll-sitemap"
-
-# Jekyll SEO Tag
-webmaster_verifications:
-  google: # 1234
-  bing: # 1234
-  alexa: # 1234
-  yandex: # 1234
-
-# -----------
-# CloudCannon
-
-social_icons:
-  - Facebook
-  - Google Plus
-  - Instagram
-  - LinkedIn
-  - Pinterest
-  - Tumblr
-  - Twitter
-  - YouTube
-  - RSS
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+exclude:
+  - Gemfile
+  - Gemfile.lock
+sass:
+  style: compressed
+future: true
